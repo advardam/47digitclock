@@ -13,9 +13,9 @@ except ImportError:
 Display = tm1637.TM1637(CLK=21, DIO=20, brightness=1.0)
 
 try:
-    print "Starting clock in the background (press CTRL + C to stop):"
+    print ("Starting clock in the background (press CTRL + C to stop):")
     Display.StartClock(military_time=False)
-    print 'Continue Python script and tweak Display!'
+    print ('Continue Python script and tweak Display!')
     sleep(5)
     Display.ShowDoublepoint(False)
     sleep(5)
@@ -28,5 +28,5 @@ try:
     Display.StopClock()
     thread.interrupt_main()
 except KeyboardInterrupt:
-    print "Properly closing the clock and open GPIO pins"
+    print ("Properly closing the clock and open GPIO pins")
     Display.cleanup()
