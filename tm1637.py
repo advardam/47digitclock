@@ -184,10 +184,10 @@ class TM1637:
 
     def StopClock(self):
         try:
-            print 'Attempting to stop live clock'
+            print ('Attempting to stop live clock')
             self.__stop_event.set()
         except:
-            print 'No clock to close'
+            print ('No clock to close')
 
 
 if __name__ == "__main__":
@@ -198,10 +198,10 @@ if __name__ == "__main__":
 
     digits = [1, 2, 3, 4]
     display.Show(digits)
-    print "1234  - Working? (Press Key)"
+    print ("1234  - Working? (Press Key)")
     scrap = raw_input()
 
-    print "Updating one digit at a time:"
+    print ("Updating one digit at a time:")
     display.Clear()
     display.Show1(1, 3)
     sleep(0.5)
@@ -210,19 +210,19 @@ if __name__ == "__main__":
     display.Show1(3, 1)
     sleep(0.5)
     display.Show1(0, 4)
-    print "4321  - (Press Key)"
+    print ("4321  - (Press Key)")
     scrap = raw_input()
 
-    print "Add double point\n"
+    print ("Add double point\n")
     display.ShowDoublepoint(True)
     sleep(0.2)
-    print "Brightness Off"
+    print ("Brightness Off")
     display.SetBrightness(0)
     sleep(0.5)
-    print "Full Brightness"
+    print ("Full Brightness")
     display.SetBrightness(1)
     sleep(0.5)
-    print "30% Brightness"
+    print ("30% Brightness")
     display.SetBrightness(0.3)
     sleep(0.3)
 
